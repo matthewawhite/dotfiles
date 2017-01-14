@@ -6,7 +6,7 @@ brew install mtr
 ln /usr/local/Cellar/mtr/0.87/sbin/mtr /usr/local/bin/mtr
 
 brew install vim
-
+brew install npm
 brew install git
 
 brew tap caskroom/cask
