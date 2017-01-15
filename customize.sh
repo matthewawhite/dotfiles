@@ -22,7 +22,6 @@ brew install Caskroom/cask/java
 
 brew cask install google-chrome
 brew cask install spotify
-brew cask install spotify-notifications
 brew cask install atom
 brew cask install flux
 brew cask install google-photos-backup
