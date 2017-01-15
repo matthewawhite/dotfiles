@@ -20,6 +20,23 @@ brew install git
 brew tap caskroom/cask
 brew install Caskroom/cask/java
 
+brew cask install google-chrome
+brew cask install spotify
+brew cask install spotify-notifications
+brew cask install atom
+brew cask install flux
+brew cask install google-photos-backup
+brew cask install dropbox
+brew cask install arduino
+brew cask install google-drive
+brew cask install garmin-express
+brew cask install caffeine
+brew cask install github-desktop 
+brew cask install sublime-text
+brew cask install the-unarchiver
+brew cask install vlc
+brew cask install sdformatter
+
 brew install gradle
 
 git clone https://github.com/amix/vimrc.git ~/.vim_runtime
@@ -35,9 +52,6 @@ defaults write com.apple.finder QuitMenuItem -bool true
 # Set Safari’s home page to `about:blank` for faster loading
 defaults write com.apple.Safari HomePage -string "about:blank"
 
-# Enable Dashboard dev mode (allows keeping widgets on the desktop)
-defaults write com.apple.dashboard devmode -bool true
-
-
 mv .bashrc ~
 mv .bash_profile ~
+
