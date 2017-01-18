@@ -36,6 +36,9 @@ brew cask install sublime-text
 brew cask install the-unarchiver
 brew cask install vlc
 brew cask install sdformatter
+brew cask install qlcolorcode
+brew cask install qlstephen
+brew cask install qlmarkdown
 
 brew install gradle
 
@@ -51,6 +54,11 @@ defaults write com.apple.finder QuitMenuItem -bool true
 
 # Set Safari’s home page to `about:blank` for faster loading
 defaults write com.apple.Safari HomePage -string "about:blank"
+
+# Temporarily disable play button from opening iTunes
+launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
+# Can undo the above command with:
+# launchctl load -w /System/Library/LaunchAgents/com.apple.rcd.plist
 
 mv .bashrc ~
 mv .bash_profile ~
