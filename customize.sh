@@ -39,6 +39,7 @@ brew cask install sdformatter
 brew cask install qlcolorcode
 brew cask install qlstephen
 brew cask install qlmarkdown
+brew cask install slack
 
 brew install gradle
 
