@@ -40,7 +40,7 @@ brew cask install qlcolorcode
 brew cask install qlstephen
 brew cask install qlmarkdown
 brew cask install slack
-
+brew cask install evernote
 brew install gradle
 
 git clone https://github.com/amix/vimrc.git ~/.vim_runtime
@@ -60,6 +60,9 @@ defaults write com.apple.Safari HomePage -string "about:blank"
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
 # Can undo the above command with:
 # launchctl load -w /System/Library/LaunchAgents/com.apple.rcd.plist
+
+# While in terminal, focus follows mouse
+defaults write com.apple.terminal FocusFollowsMouse -bool true
 
 mv .bashrc ~
 mv .bash_profile ~
