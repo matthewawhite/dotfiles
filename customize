@@ -42,6 +42,7 @@ brew cask install qlmarkdown
 brew cask install slack
 brew cask install evernote
 brew install gradle
+brew install htop
 
 git clone https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
@@ -62,7 +63,13 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
 # launchctl load -w /System/Library/LaunchAgents/com.apple.rcd.plist
 
 # While in terminal, focus follows mouse
-defaults write com.apple.terminal FocusFollowsMouse -bool true
+defaults write com.apple.Terminal FocusFollowsMouse -bool true
+
+open Flat.terminal
+
+# Set flat as default terminal theme
+defaults write com.apple.Terminal "Startup Window Settings" Flat
+defaults write com.apple.Terminal "Default Window Settings" Flat
 
 mv .bashrc ~
 mv .bash_profile ~
