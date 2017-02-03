@@ -65,6 +65,9 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
 # While in terminal, focus follows mouse
 defaults write com.apple.Terminal FocusFollowsMouse -bool true
 
+# Autohide dock
+defaults write com.apple.dock.plist autohide -bool true
+
 open Flat.terminal
 
 # Set flat as default terminal theme
