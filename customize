@@ -16,7 +16,12 @@ ln /usr/local/Cellar/mtr/0.87/sbin/mtr /usr/local/bin/mtr
 brew install vim
 brew install npm
 brew install git
+
+git config --global user.name "Matthew White"
+git config --global user.email mwhite1998@gmail.com
+
 brew install tree
+
 
 brew tap caskroom/cask
 brew install Caskroom/cask/java
