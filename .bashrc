@@ -21,6 +21,7 @@ function changeDirectory {
     ls -a;
 }
 
+export HISTCONTROL=ignoredups
 
 #START PS1 GENERATION
 
@@ -71,4 +72,4 @@ function parse_git_dirty {
 	fi
 }
 
-export PS1="\h:\w \u \`parse_git_branch\`\n$ "
+export PS1="\u@\h:\w \`parse_git_branch\`\n$ "
