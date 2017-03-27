@@ -5,7 +5,7 @@
 # Ask for the administrator password upfront
 sudo -v
 
-# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
+# Keep-alive: update existing `sudo` time stamp until 'customize' has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -21,7 +21,6 @@ git config --global user.name "Matthew White"
 git config --global user.email mwhite1998@gmail.com
 
 brew install tree
-
 
 brew tap caskroom/cask
 brew install Caskroom/cask/java
@@ -51,6 +50,8 @@ brew install htop
 
 git clone https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
+
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
 # Reveal IP address, hostname, OS version, etc. when clicking the clock
 # in the login window

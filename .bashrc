@@ -21,6 +21,35 @@ function changeDirectory {
     ls -a;
 }
 
+#Jumps up to provided directory
+upto ()
+{
+    if [ -z "$1" ]; then
+        return
+    fi
+    local upto=$1
+    cd "${PWD/\/$upto\/*//$upto}"
+}
+
+#Allows for tab completion
+_upto()
+{
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    local d=${PWD//\//\ }
+    COMPREPLY=( $( compgen -W "$d" -- "$cur" ) )
+}
+complete -F _upto upto
+
+#Jumps down to a specific directory
+jd(){
+    if [ -z "$1" ]; then
+        echo "Usage: jd [directory]";
+        return 1
+    else
+        cd **"/$1"
+    fi
+}
+
 export HISTCONTROL=ignoredups
 
 #START PS1 GENERATION
@@ -72,4 +101,4 @@ function parse_git_dirty {
 	fi
 }
 
-export PS1="\u@\h:\w \`parse_git_branch\`\n$ "
+export PS1="\u@\h: \w \`parse_git_branch\`\n$ "
