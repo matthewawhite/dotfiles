@@ -47,6 +47,7 @@ brew cask install slack
 brew cask install evernote
 brew install gradle
 brew install htop
+brew cask install wireshark --with-qt
 
 git clone https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
