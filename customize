@@ -25,6 +25,7 @@ brew install tree
 brew tap caskroom/cask
 brew install Caskroom/cask/java
 
+brew install gnupg
 brew cask install google-chrome
 brew cask install spotify
 brew cask install atom
@@ -48,6 +49,8 @@ brew cask install evernote
 brew install gradle
 brew install htop
 brew cask install wireshark --with-qt
+
+npm install gtop -g
 
 git clone https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
@@ -83,4 +86,5 @@ defaults write com.apple.Terminal "Default Window Settings" Flat
 
 mv .bashrc ~
 mv .bash_profile ~
-
+mv .aliases ~
+mv .inputrc ~

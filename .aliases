@@ -1,0 +1,34 @@
+alias ls='ls -FGh'
+alias la='ls -aFGh'
+alias ll='ls -lFGh'
+alias lal='ls -alFGh'
+alias vi='vim'
+alias cd..='cd ..'
+alias ..='cd ..'
+alias svi='sudo vim'
+alias l='ls'
+alias mtr='sudo mtr'
+alias c='clear'
+alias g='git'
+
+# Retrieve public ip address
+alias publicip='dig +short myip.opendns.com @resolver1.opendns.com'
+
+# Print graph of activity for repository
+alias gGraph='git log --oneline --graph --color --all --decorate'
+
+# Reload shell file
+alias reload="exec $SHELL -l"
+
+# List attached usb devices
+alias lsusb="system_profiler SPUSBDataType"
+
+# Lock the screen (when going AFK)
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# Change directory and print out directory contents
+alias cdl=changeDirectory
+function changeDirectory {
+        cd $1;
+        ls -a;
+}
