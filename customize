@@ -19,6 +19,7 @@ brew install git
 
 git config --global user.name "Matthew White"
 git config --global user.email mwhite1998@gmail.com
+git config --global core.editor /usr/bin/vim
 
 brew install tree
 
