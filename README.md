@@ -4,7 +4,7 @@ This repository includes my personal dotfiles which includes .bashrc, .inputrc, 
 ## Setup
 Clone this repository: <code>git clone https://github.com/matthewawhite/dotfiles.git</code><br>
 
-Open up the directory in Terminal and run<br>
+Open up the directory in Terminal and run:<br>
 <code>./customize</code><br>
 This will put all of the dotfiles in the correct location in the file system, download tools such as Node.js and git, download apps such as Chrome and Spotify, and also modify the OS settings.<br>
 
