@@ -18,7 +18,7 @@ brew install npm
 brew install git
 
 git config --global user.name "Your_Name"
-git config --global user.email "Your_email@gmail.com"
+git config --global user.email your_email@gmail.com
 git config --global core.editor /usr/bin/vim
 
 brew install tree
