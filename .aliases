@@ -10,6 +10,8 @@ alias l='ls'
 alias mtr='sudo mtr'
 alias c='clear'
 alias g='git'
+alias e='emacs'
+alias v='vim'
 
 # Retrieve public ip address
 alias publicip='dig +short myip.opendns.com @resolver1.opendns.com'
