@@ -108,8 +108,6 @@ then
     wget http://ethanschoonover.com/solarized/files/solarized.zip
     unzip -a solarized.zip
 
-    git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
-
     wget https://github.com/powerline/fonts/blob/master/Meslo%20Slashed/Meslo%20LG%20M%20Regular%20for%20Powerline.ttf
     open Meslo\ LG\ M\ Regular\ for\ Powerline.ttf
     rm Meslo\ LG\ M\ Regular\ for\ Powerline.ttf
