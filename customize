@@ -96,16 +96,20 @@ mv .inputrc ~
 # Undo with: defaults -currentHost delete com.apple.ImageCapture disableHotPlug
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
+# Ask about oh_my_zsh:
+echo -n "Do you want to install oh_my_zsh? (y/n): "
+read oh_my_zsh
 
-
-
-
-
-
-
-
-
-
-
-
+if [ $oh_my_zsh = 'y' ] 
+then
+    sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+else
+    echo -n "Do you want to use zsh instead of bash? (y/n): "
+    read zshResponse
+    
+    if [ zshResponse = 'y' ]
+    then
+        chsh -s /bin/zsh
+    fi
+fi
 
