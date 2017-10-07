@@ -50,6 +50,7 @@ brew cask install evernote
 brew install gradle
 brew install htop
 brew cask install wireshark --with-qt
+brew cask install iterm2
 
 npm install gtop -g
 
@@ -103,6 +104,27 @@ read oh_my_zsh
 if [ $oh_my_zsh = 'y' ] 
 then
     sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+    
+    wget http://ethanschoonover.com/solarized/files/solarized.zip
+    unzip -a solarized.zip
+
+    git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+
+    wget https://github.com/powerline/fonts/blob/master/Meslo%20Slashed/Meslo%20LG%20M%20Regular%20for%20Powerline.ttf
+    open Meslo\ LG\ M\ Regular\ for\ Powerline.ttf
+    rm Meslo\ LG\ M\ Regular\ for\ Powerline.ttf
+
+    brew install zsh-syntax-highlighting
+    echo "source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> .zshrc
+
+    git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+    plugins=(zsh-autosuggestions)
+
+    cp .zshrc ~/.zshrc
+    cp .zprofile ~/.zprofile
+
+    echo "To finish setup for iTerm theme: Open iTerm 2, open Preferences, click on the "Profiles" icon in the preferences toolbar, then select the "Colors" tab. Select the Solaris Dark theme file in the "Color Presets..." drop down. Then click on the "Text" tab and click on change font and choose Meslo LG L Regular for Powerline."
+
 else
     echo -n "Do you want to use zsh instead of bash? (y/n): "
     read zshResponse
