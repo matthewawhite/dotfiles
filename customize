@@ -113,15 +113,12 @@ then
     rm Meslo\ LG\ M\ Regular\ for\ Powerline.ttf
 
     brew install zsh-syntax-highlighting
-    echo "source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> .zshrc
-
-    git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
-    plugins=(zsh-autosuggestions)
+    brew install zsh-autosuggestions
 
     cp .zshrc ~/.zshrc
     cp .zprofile ~/.zprofile
 
-    echo "To finish setup for iTerm theme: Open iTerm 2, open Preferences, click on the "Profiles" icon in the preferences toolbar, then select the "Colors" tab. Select the Solaris Dark theme file in the "Color Presets..." drop down. Then click on the "Text" tab and click on change font and choose Meslo LG L Regular for Powerline."
+    echo "To finish setup for iTerm theme: Open iTerm 2, open Preferences, click on the "Profiles" icon in the preferences toolbar, then select the "Colors" tab. Select the Solaris Dark theme file in the "Color Presets..." drop down. Then click on the "Text" tab and click on change font and choose Meslo LG L Regular for Powerline. Then if autosuggestions aren't showing up change the value of Black Bright to a color that different enough to see easily."
 
 else
     echo -n "Do you want to use zsh instead of bash? (y/n): "
