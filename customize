@@ -92,3 +92,20 @@ mv .inputrc ~
 
 # Create vim bindings for navigating different desktops in System Preferences (find way in terminal)
 
+# Stop Photos app from opening when a phone is connected to laptop
+# Undo with: defaults -currentHost delete com.apple.ImageCapture disableHotPlug
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
