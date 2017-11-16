@@ -70,7 +70,11 @@ defaults write com.apple.finder QuitMenuItem -bool true
 defaults write com.apple.Safari HomePage -string "about:blank"
 
 # Temporarily disable play button from opening iTunes
-launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
+# With macOS High Sierra Apple doesn't allow modifications of the built-in launch
+# scripts and so the below command won't work with SIP disabled or as su
+# For now making iTunes not executable will do the trick:
+chmod -x /Applications/iTunes.app
+# launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
 # Can undo the above command with:
 # launchctl load -w /System/Library/LaunchAgents/com.apple.rcd.plist
 
