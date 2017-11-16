@@ -37,7 +37,7 @@ brew cask install arduino
 brew cask install google-drive
 brew cask install garmin-express
 brew cask install caffeine
-brew cask install github-desktop 
+brew cask install github-desktop
 brew cask install sublime-text
 brew cask install the-unarchiver
 brew cask install vlc
@@ -101,10 +101,10 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 echo -n "Do you want to install oh_my_zsh? (y/n): "
 read oh_my_zsh
 
-if [ $oh_my_zsh = 'y' ] 
+if [ $oh_my_zsh = 'y' ]
 then
     sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-    
+
     wget http://ethanschoonover.com/solarized/files/solarized.zip
     unzip -a solarized.zip
 
@@ -118,15 +118,18 @@ then
     cp .zshrc ~/.zshrc
     cp .zprofile ~/.zprofile
 
-    echo "To finish setup for iTerm theme: Open iTerm 2, open Preferences, click on the "Profiles" icon in the preferences toolbar, then select the "Colors" tab. Select the Solaris Dark theme file in the "Color Presets..." drop down. Then click on the "Text" tab and click on change font and choose Meslo LG L Regular for Powerline. Then if autosuggestions aren't showing up change the value of Black Bright to a color that different enough to see easily."
+    echo "To finish setup for iTerm theme: Open iTerm 2, open Preferences, click on the \"Profiles\" icon in the preferences \n\r"
+    echo "toolbar, then select the \"Colors\" tab. Select the Solaris Dark theme file in the \"Color Presets...\" drop down. \n\r"
+    echo "Then click on the \"Text\" tab and click on change font and choose Meslo LG L Regular for Powerline. Then if auto suggestions \n\r"
+    echo "aren't showing up change the value of Black Bright to a color that different enough to see easily. Finally go to Prefernces->General\n\r"
+    echo "and select Reuse previous session's directory.\n\r"
 
 else
     echo -n "Do you want to use zsh instead of bash? (y/n): "
     read zshResponse
-    
+
     if [ zshResponse = 'y' ]
     then
         chsh -s /bin/zsh
     fi
 fi
-
