@@ -2,7 +2,7 @@ if [ $TERM_PROGRAM = "Apple_Terminal" ]
 then
     export SHELL=/bin/bash
     echo "Terminal uses Bash"
-    exec $SHELL -l 
+    exec $SHELL -l
 elif [ $TERM_PROGRAM = "iTerm.app" ]
 then
     echo "iTerm uses zsh"
