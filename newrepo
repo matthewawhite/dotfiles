@@ -1,0 +1,23 @@
+#!/bin/bash
+
+repoName=$1
+
+mkdir $repoName 
+cd $repoName
+
+git init
+curl -u 'matthewawhite' https://api.github.com/user/repos -d '{"name":"'$1'"}'
+git remote add origin https://github.com/matthewawhite/"$1".git
+
+touch README.md
+touch .gitignore
+
+echo "# $1" > README.md
+echo ".DS_Store" > .gitignore
+
+git config --global user.name "Matthew White"
+git config --global user.email "mwhite1998@gmail.com"
+
+git add .
+git commit -m "Initial commit"
+git push -u origin master
