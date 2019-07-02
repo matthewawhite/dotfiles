@@ -101,6 +101,12 @@ mv .inputrc ~
 # Undo with: defaults -currentHost delete com.apple.ImageCapture disableHotPlug
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
+# Setup fish shell
+brew install fish
+echo "/usr/local/bin/fish" >> /etc/shells
+curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
+fisher add matchai/spacefish
+
 # Ask about oh_my_zsh:
 echo -n "Do you want to install oh_my_zsh? (y/n): "
 read oh_my_zsh
@@ -137,3 +143,5 @@ else
         chsh -s /bin/zsh
     fi
 fi
+
+chsh -s /usr/local/bin/fish
